@@ -12,7 +12,6 @@ module.exports = {
   rules: {
     quotes: 0,
     semi: 0,
-    "space-before-function-paren": 0,
-    indent: ["error", 12]
+    "space-before-function-paren": 0
   }
 };
