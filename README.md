@@ -1,10 +1,10 @@
 # trynuxt
 
-> play around with nuxt 4 fun
+> Go through [Nuxt JS Crash Course](https://www.youtube.com/watch?v=ltzlhAxJr74).
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 
