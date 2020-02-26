@@ -1,12 +1,3 @@
-const routerBase =
-  process.env.DEPLOY_ENV === "GH_PAGES"
-    ? {
-        router: {
-          base: "/Leke-med-Nuxt/"
-        }
-      }
-    : {};
-
 export default {
   mode: "universal",
   /*
@@ -66,6 +57,5 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  ...routerBase
+  }
 };
