@@ -1,9 +1,11 @@
 <template>
   <div>
-    <nuxt-link to="/jokes">Back to Jokes</nuxt-link>
-    <h2>{{joke}}</h2>
-    <hr />
-    <small>Joke ID: {{$route.params.id}}</small>
+    <nuxt-link to="/jokes">
+      Back to Jokes
+    </nuxt-link>
+    <h2>{{ joke }}</h2>
+    <hr>
+    <small>Joke ID: {{ $route.params.id }}</small>
   </div>
 </template>
 
@@ -29,9 +31,8 @@ export default {
       );
 
       this.joke = res.data.joke;
-      console.log("api request when mount", this.joke);
     } catch (err) {
-      console.log("error", err);
+      console.error(err);
     }
   },
   head() {
@@ -48,6 +49,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>

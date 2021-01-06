@@ -1,7 +1,7 @@
 <template>
   <div>
-    <SearchJokes v-on:search-text="searchText" />
-    <Joke v-for="x in jokes" :key="x.id" :id="x.id" :joke="x.joke" />
+    <SearchJokes @search-text="searchText" />
+    <Joke v-for="x in jokes" :id="x.id" :key="x.id" :joke="x.joke" />
   </div>
 </template>
 
@@ -30,9 +30,8 @@ export default {
       const res = await axios.get("https://icanhazdadjoke.com/search", config);
 
       this.jokes = res.data.results;
-      console.log("api request when mount", this.jokes);
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   },
   methods: {
@@ -49,9 +48,8 @@ export default {
         );
 
         this.jokes = res.data.results;
-        console.log("api request when mount", this.jokes);
       } catch (err) {
-        console.log(err);
+        console.error(err);
       }
     }
   },
